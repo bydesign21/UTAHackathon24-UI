@@ -1,0 +1,38 @@
+<div class="profile-container">
+  <!-- Profile Card for Email and Password -->
+  <mat-card class="profile-card">
+    <mat-card-title>User Profile</mat-card-title>
+    <mat-divider></mat-divider>
+
+    <mat-card-content>
+      <!-- Display User Email -->
+      <div class="profile-field">
+        <label for="email"><strong>Email:</strong></label>
+        <input id="email" [value]="user?.email || ''" disabled />
+      </div>
+
+      <!-- Password Field (Editable) -->
+      <div class="profile-field">
+        <label for="password"><strong>Password:</strong></label>
+        <input
+          id="password"
+          matInput
+          type="password"
+          [value]="user?.password || '********'"
+          disabled
+        />
+        <button
+          mat-icon-button
+          color="primary"
+          aria-label="Show Password"
+          (click)="togglePasswordVisibility()"
+        ></button>
+      </div>
+    </mat-card-content>
+
+    <!-- Action Buttons -->
+    <mat-card-actions>
+      <button mat-raised-button color="warn" (click)="signout()">Logout</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

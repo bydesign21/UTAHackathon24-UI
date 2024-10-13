@@ -1,0 +1,28 @@
+<h1>Add Playlist</h1>
+<form nz-form>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="title">Title</nz-form-label>
+    <nz-form-control [nzSpan]="14">
+      <input nz-input name="title" type="text" id="title" [(ngModel)]="title" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="description">Description</nz-form-label>
+    <nz-form-control [nzSpan]="14">
+      <input
+        nz-input
+        name="description"
+        type="text"
+        id="description"
+        [(ngModel)]="description"
+      />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="songs">Add Songs</nz-form-label>
+    <nz-form-control [nzSpan]="14">
+      <button nz-input name="songs" id="songs">Select</button>
+    </nz-form-control>
+  </nz-form-item>
+  <button nz-button nzType="primary" type="submit">Add Playlist</button>
+</form>
